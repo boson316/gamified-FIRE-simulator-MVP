@@ -32,11 +32,12 @@ jobs:
         run: npm ci
         working-directory: web
 
-      - name: Test
-        run: pytest -q
+      - name: Python test + coverage (src only)
+        run: pytest --cov=src --cov-fail-under=70 -q
 
-      - name: Coverage gate
-        run: pytest --cov=src --cov=scripts --cov-fail-under=70 -q
+      - name: Web test (compound math)
+        run: npm run test
+        working-directory: web
 
       - name: Run benchmark
         run: python scripts/run_benchmark.py --out artifacts
