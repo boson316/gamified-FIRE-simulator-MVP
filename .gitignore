@@ -1,0 +1,23 @@
+# Dependencies
+web/node_modules/
+web/.next/
+web/out/
+
+# Python
+__pycache__/
+.pytest_cache/
+.coverage
+*.pyc
+
+# Env & artifacts
+.env
+.env.*
+artifacts/*.json
+!artifacts/.gitkeep
+
+# Internal docs (public repo hygiene)
+AGENTS.md
+TASKS.md
+KPI.md
+BENCHMARK.md
+CI_GATES.md

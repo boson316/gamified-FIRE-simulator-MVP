@@ -1,0 +1,44 @@
+---
+description: Follow senior planning SOP when kicking off, scoping, shipping, or using AI on bootstrapped projects (dual metrics, scope lock, GTM before add-ons).
+alwaysApply: false
+globs:
+  - "**/PRD.md"
+  - "**/ROADMAP.md"
+  - "**/SUMMARY.md"
+  - "**/TECH_DEBT.md"
+  - "**/PLANNING.md"
+  - "**/TASKS.md"
+  - "**/next_actions.md"
+---
+
+# Senior Planning Rules（Agent）
+
+開案、改 scope、接近期交付、或 `code_complete` 高但無公開 demo 時，先讀專案根目錄 `PLANNING.md`。
+
+## 必做
+
+1. **雙指標：** 更新或讀取 `SUMMARY.md` / `ROADMAP.md` 的 `code_complete` 與 `go_to_market`；禁止只報一個百分比。
+2. **Scope lock：** 只實作 `PRD.md` In Scope；Out of Scope / v1.1 需使用者明確確認 + `artifacts/decision_*.md`。
+3. **驗收先行：** 動手前列預計改動檔案 + 驗收命令（pytest、煙測 URL、手動步驟）。
+4. **技術債：** stub、fixture-only、未部署、本機 URL → 寫入 `TECH_DEBT.md`；SUMMARY 不得宣稱已上線。
+5. **GTM 優先：** 當 `go_to_market < 40%` 且 `code_complete ≥ 70%`，預設**不加新 FR**；改跑 `docs/go-to-market-checklist.md` 或修 P0 債。
+6. **AI 節制：** 一 session 一個可 merge 單元；禁止順手做下一 Phase 或加購項。
+
+## 禁止
+
+- 把 pytest 全綠等同「可接案 / 已上線」
+- 在無公開 URL 時更新 outreach 為「已完成」
+- 未記 `TECH_DEBT.md` 即標記外部整合（crawler、第三方 API）為 Done
+- 對外文案暗示「極短人時 = Senior 全職一週產出」
+
+## 完成回報必含
+
+- 變更檔案清單
+- 驗收命令與結果
+- `code_complete` / `go_to_market` 是否變動（若變動，說明原因）
+- 新增或關閉的 `TECH_DEBT` 項
+
+## 參考
+
+- `PLANNING.md` — 完整 SOP
+- `prompt-patterns.md` — plan-before-ship、scope-gate、dual-metrics-review
