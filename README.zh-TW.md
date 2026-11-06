@@ -73,3 +73,7 @@ web/
 
 - 作品集衝刺規劃：`作品集_五專案衝刺規劃.md` §7
 - 複利參考實作：`cursor/3_Web與API/fin-tools-tw/dca/js/calc.js`
+
+## 授權
+
+程式碼以 [MIT License](LICENSE) 授權。

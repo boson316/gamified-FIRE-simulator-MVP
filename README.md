@@ -68,3 +68,7 @@ npm run build
 
 - Portfolio sprint plan: `作品集_五專案衝刺規劃.md` §7
 - Reusable DCA math reference: `cursor/3_Web與API/fin-tools-tw/dca/js/calc.js`
+
+## License
+
+Code is released under the [MIT License](LICENSE).
